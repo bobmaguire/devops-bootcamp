@@ -1,4 +1,5 @@
 require('../setup_test.js');
+const {isEnabled} = require('unleash-client');
 
 describe('roll', async () => {
   beforeEach(async () => {
