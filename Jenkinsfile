@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Docker Image Build') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'MyDockerRepo', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
+                withCredentials([usernamePassword(credentialsId: 'MyDockerRepo', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')])
                 sh '''
                 wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce-cli_18.09.9~3-0~ubuntu-bionic_amd64.deb
                 dpkg -i ./docker-ce-cli_18.09.9~3-0~ubuntu-bionic_amd64.deb
